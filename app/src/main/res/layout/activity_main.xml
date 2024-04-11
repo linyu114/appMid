@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6C8B0"
     tools:context=".MainActivity">
+
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="#C5AD84"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtMeal"
@@ -14,6 +27,7 @@
         android:layout_marginTop="140dp"
         android:text="主食："
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="HardcodedText" />
@@ -25,6 +39,7 @@
         android:layout_marginTop="32dp"
         android:text="飲料："
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txtMeal"
         app:layout_constraintTop_toBottomOf="@+id/txtMeal"
         tools:ignore="HardcodedText" />
@@ -36,6 +51,7 @@
         android:layout_marginTop="32dp"
         android:text="點心："
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txtDrink"
         app:layout_constraintTop_toBottomOf="@+id/txtDrink"
         tools:ignore="HardcodedText" />
@@ -47,6 +63,7 @@
         android:layout_marginTop="32dp"
         android:text="總金額："
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txtDessert"
         app:layout_constraintTop_toBottomOf="@+id/txtDessert"
         tools:ignore="HardcodedText" />
@@ -58,6 +75,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="50dp"
         android:text="點餐"
+        android:textColorLink="#3F51B5"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/txtResult"
         app:layout_constraintTop_toBottomOf="@+id/txtResult"
@@ -65,7 +83,7 @@
 
     <TextView
         android:id="@+id/txtShowMeal"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="0dp"
         android:layout_marginStart="60dp"
         android:textSize="24sp"
@@ -74,7 +92,7 @@
 
     <TextView
         android:id="@+id/txtShowDrink"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="0dp"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/txtShowMeal"
@@ -100,12 +118,14 @@
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="點餐"
         android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

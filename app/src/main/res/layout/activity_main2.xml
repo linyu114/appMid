@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6C8B0"
     tools:context=".MainActivity2">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="120dp"
         android:text="主食："
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,6 +58,7 @@
         android:layout_marginTop="8dp"
         android:text="飲料："
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txtMealChoice"
         app:layout_constraintTop_toBottomOf="@+id/radioMeal" />
 
@@ -66,6 +69,7 @@
         android:layout_marginTop="8dp"
         android:text="點心："
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txtDrinkChoice"
         app:layout_constraintTop_toBottomOf="@+id/radioDrink" />
 
@@ -130,9 +134,11 @@
         android:id="@+id/txtSum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:text="總金額："
+        android:textAllCaps="false"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/txtDessertChoice"
         app:layout_constraintTop_toBottomOf="@+id/ChbDessert2" />
 
