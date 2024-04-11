@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/txtMealChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:text="主食："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/txtMealChoice"
+        app:layout_constraintTop_toTopOf="@+id/txtMealChoice">
+
+        <RadioButton
+            android:id="@+id/ButtonAmerican"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="美式臘腸$80"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/ButtonHawaiian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="夏威夷$90"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/ButtonTakoyaki"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="和風章魚燒$100"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtDrinkChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="飲料："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtMealChoice"
+        app:layout_constraintTop_toBottomOf="@+id/radioMeal" />
+
+    <TextView
+        android:id="@+id/txtDessertChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="點心："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtDrinkChoice"
+        app:layout_constraintTop_toBottomOf="@+id/radioDrink" />
+
+    <RadioGroup
+        android:id="@+id/radioDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/radioMeal"
+        app:layout_constraintTop_toTopOf="@+id/txtDrinkChoice">
+
+        <RadioButton
+            android:id="@+id/ButtonCoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可樂$20"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/ButtonBlacktea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="紅茶$15"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/ChbDessert1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="雞塊$40"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/radioDrink"
+        app:layout_constraintTop_toTopOf="@+id/txtDessertChoice"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/ChbDessert2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="薯條$30"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/ChbDessert1"
+        app:layout_constraintStart_toStartOf="@+id/ChbDessert1"
+        app:layout_constraintTop_toBottomOf="@+id/ChbDessert1"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnSure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="84dp"
+        android:text="確認"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/ChbDessert2"
+        app:layout_constraintTop_toBottomOf="@+id/ChbDessert2"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="總金額："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtDessertChoice"
+        app:layout_constraintTop_toBottomOf="@+id/ChbDessert2" />
+
+    <TextView
+        android:id="@+id/TxtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSum"
+        app:layout_constraintStart_toEndOf="@+id/txtSum"
+        app:layout_constraintTop_toTopOf="@+id/txtSum"
+        tools:text="test" />
+
+    <EditText
+        android:id="@+id/editMeal"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioMeal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioMeal"
+        app:layout_constraintTop_toTopOf="@+id/radioMeal" />
+
+    <EditText
+        android:id="@+id/editDessert1"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ChbDessert1"
+        app:layout_constraintStart_toStartOf="@+id/editDrink"
+        app:layout_constraintTop_toTopOf="@+id/ChbDessert1"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editDrink"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/radioDrink"
+        app:layout_constraintEnd_toEndOf="@+id/editMeal"
+        app:layout_constraintStart_toStartOf="@+id/editMeal"
+        app:layout_constraintTop_toTopOf="@+id/radioDrink" />
+
+    <EditText
+        android:id="@+id/editDessert2"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ChbDessert2"
+        app:layout_constraintStart_toStartOf="@+id/editDessert1"
+        app:layout_constraintTop_toBottomOf="@+id/ChbDessert1"
+        tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
