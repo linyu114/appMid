@@ -33,42 +33,60 @@ class MainActivity2 : AppCompatActivity() {
         btnSure.setOnClickListener {
             //主食
             var food = ""
-            if (btnAmerican.isChecked){
-                food = "美式臘腸"
-            }
-            if(btnHawaiian.isChecked){
-                food = "夏威夷"
-            }
-            if(btnTakoyaki.isChecked){
-                food = "和風章魚燒"
-            }
+            val pizzatotal = txtPizzaSum.text.toString().toInt()
+            if(pizzatotal!=0){
+                if (btnAmerican.isChecked){
+                    food = "美式臘腸"
+                }
+                if(btnHawaiian.isChecked){
+                    food = "夏威夷"
+                }
+                if(btnTakoyaki.isChecked){
+                    food = "和風章魚燒"
+                }
+            }else{food=" "}
+
 
             //飲料
             var drink = ""
-            if (btnCoke.isChecked){
-                drink = "可樂"
-            }
-            if(btnBlacktea.isChecked){
-                drink = "紅茶"
-            }
+            val drinktotal = txtDrinkSum.text.toString().toInt()
+            if(drinktotal!=0){
+                if (btnCoke.isChecked){
+                    drink = "可樂"
+                }
+                if(btnBlacktea.isChecked){
+                    drink = "紅茶"
+                }
+            }else{drink=" "}
 
             //點心
             var dessert=""
+            val dessert1total = txtDessert1Sum.text.toString().toInt()
+            val dessert2total = txtDessert2Sum.text.toString().toInt()
             if(chbDessert1.isChecked){
-                dessert="雞塊"
-                if(chbDessert2.isChecked){
-                    dessert="雞塊&薯條"
+                if(dessert1total!=0){
+                    dessert="雞塊"
+                    if(dessert2total!=0){
+                        if(chbDessert2.isChecked){
+                            dessert="雞塊&薯條"
+                        }
+                    }else{dessert="雞塊"}
+                }else{
+                    if(dessert2total!=0){
+                        dessert="薯條"
+                    }
+                    else {
+                        dessert = " "
+                    }
                 }
             }
             else if (chbDessert2.isChecked){
-                dessert="薯條"
+                if(dessert2total!=0){
+                    dessert="薯條"
+                }else{dessert=" "}
             }
             //總金額
             var total = 0
-            val pizzatotal = txtPizzaSum.text.toString().toInt()
-            val drinktotal = txtDrinkSum.text.toString().toInt()
-            val dessert1total = txtDessert1Sum.text.toString().toInt()
-            val dessert2total = txtDessert2Sum.text.toString().toInt()
 
             if (btnAmerican.isChecked) {
                 total = pizzatotal * 80
